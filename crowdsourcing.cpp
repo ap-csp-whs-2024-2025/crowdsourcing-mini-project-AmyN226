@@ -13,6 +13,20 @@
 
 int main()
 {
-    // write your code here
+    std::vector<string> songName
+    std::cout << "How many songs would you like to store?";
+    int counter = 0;
+    int songs;
+    std::cin >> songs;
+    std::string songName;
+
+    while (counter < songs)
+    {
+        std::cout << "What is the name of the song?";
+        std::cin >> songName;
+
+    }
+
+
     return 0;
 }
