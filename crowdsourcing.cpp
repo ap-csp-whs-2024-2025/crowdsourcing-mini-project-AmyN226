@@ -13,18 +13,31 @@
 
 int main()
 {
+    
     std::vector<std::string> songNames = {};
-    std::cout << "How many songs would you like to store?";
-    int counter = 0;
-    int songs;
-    std::cin >> songs;
-    std::string songName;
+    std::vector<std::string> songArtist = {};
+    std::vector<std::string> songDuration = {};
 
-    while (counter < songs)
+    int songsNum;
+    std::cout << "How many songs would you like to store?";
+    std::cin >> songsNum;
+
+    int counter = 0;
+    std::string songartist;
+    std::string songName;
+    int duration;
+
+    while (counter < songsNum)
     {
         std::cout << "What is the name of the song?";
         std::cin >> songName;
         songNames.push_back(songName);
+        std::cout << "What is the name of the artist?";
+        std::cin >> songartist;
+        songArtist.push_back(songartist);
+        std::cout << "What is the duration in secs";
+        std::cin >> duration;
+        songDuration.push_back(duration);
 
         counter = counter + 1;
 
