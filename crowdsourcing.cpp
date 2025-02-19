@@ -13,7 +13,7 @@
 
 int main()
 {
-    std::vector<string> songName
+    std::vector<std::string> songNames = {};
     std::cout << "How many songs would you like to store?";
     int counter = 0;
     int songs;
@@ -24,6 +24,9 @@ int main()
     {
         std::cout << "What is the name of the song?";
         std::cin >> songName;
+        songNames.push_back(songName);
+
+        counter = counter + 1;
 
     }
 
