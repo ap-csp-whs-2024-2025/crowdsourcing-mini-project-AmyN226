@@ -16,7 +16,7 @@ int main()
     
     std::vector<std::string> songNames = {};
     std::vector<std::string> songArtist = {};
-    std::vector<std::string> songDuration = {};
+    std::vector<int> songDuration = {};
 
     int songsNum;
     std::cout << "How many songs would you like to store?";
@@ -43,6 +43,23 @@ int main()
 
     }
 
+    
+
+    std::vector<int> totalDuration(std::vector<int> songDuration);
+    {
+        int Counter = 0;
+        int length = songDuration.size();
+        int totalDurations = 0;
+
+        while (Counter < length)
+        {
+            totalDurations = totalDurations + songDuration[Counter];
+            Counter = Counter + 1;
+        }
+        return totalDurations;
+    }
+
+    std::cout << "The total duration is " << totalDuration << "secs" << std::endl;
 
     return 0;
 }
